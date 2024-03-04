@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 4000;
 const keep_alive = require('./keep_alive.js');
 const server = app.listen(PORT, () => console.log(`💗 server on port ${PORT}`));
 const io = require('socket.io')(server);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'docs')));
 
 let socketConected = new Set();
 
